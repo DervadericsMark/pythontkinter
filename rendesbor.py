@@ -6,6 +6,16 @@ belefér, akkor add meg, hogy mennyi férne még bele! Írd ki százalékosan is
 telítettséget! Az adatokat egészre kerekítve írd ki!
 '''
 from tkinter import *
+import math
+
+def szamolas():
+    sugar=int(sugarmezo.get())
+    magassag=int(magassagmezo.get())
+    terfogat=math.pi*sugar**2*magassag
+    
+       
+
+
 foablak=Tk()
 
 hordosugara=Label(foablak,text="A hordó sugara (dm-ben):")
@@ -19,5 +29,14 @@ hordomagassaga.grid(row=1,column=0)
 
 magassagmezo=Entry(foablak)
 magassagmezo.grid(row=1,column=1)
+
+hordoliter=Label(foablak,text="A hordó térfogata literben:")
+hordoliter.grid(row=2,column=0)
+
+hordolitermezo=Entry(foablak)
+hordolitermezo.grid(row=2,column=1)
+
+gomb1=Button(foablak,text="Kiszámol")
+gomb1.grid(row=3,column=1)
 
 foablak.mainloop()
