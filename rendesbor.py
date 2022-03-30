@@ -13,7 +13,6 @@ def szamolas():
     magassag=int(magassagmezo.get())
     terfogat=math.pi*sugar**2*magassag
     
-       
 
 
 foablak=Tk()
@@ -36,7 +35,13 @@ hordoliter.grid(row=2,column=0)
 hordolitermezo=Entry(foablak)
 hordolitermezo.grid(row=2,column=1)
 
+bormennyiseg=Label(foablak,text="A bor mennyisége:")
+bormennyiseg.grid(row=4,column=0)
+
+bormennyiseg_mezo=Entry(foablak)
+bormennyiseg_mezo.grid(row=4,column=1)
+
 gomb1=Button(foablak,text="Kiszámol")
-gomb1.grid(row=3,column=1)
+gomb1.grid(row=5,column=1)
 
 foablak.mainloop()
