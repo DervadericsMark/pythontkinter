@@ -10,10 +10,12 @@ def ujablak():
     gomb2.pack()
     ablak2.mainloop()
 
+#a widgetek létrehozása
 szoveg1=Label(ablak1,text="Kattints a gombra!")
-szoveg1.pack()
 gomb1=Button(ablak1,text="Névjegy",command=ujablak)
+#laptördelés a "pack" metódus segítségével
 gomb1.pack()
-
+szoveg1.pack()
+#indítás:
 ablak1.mainloop()
 
