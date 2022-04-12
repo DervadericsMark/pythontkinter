@@ -18,8 +18,12 @@ def felszin():
         b=eval(mezo2.get())
         c=eval(mezo3.get())
         felszin=2*(a*b+a*c+b*c)
-        mezo4.delete(0,END)
-        mezo4.insert(0,str(felszin))
+        if felszin<0:
+            mezo4.delete(0,END)
+            mezo4.insert(0,str("Negatív számot adtál meg"))
+        else:
+            mezo4.delete(0,END)
+            mezo4.insert(0,str(felszin))
     abl3=Toplevel(foablak)
     abl3.title("A téglatest felszíne")
     abl3.minsize(width=300,height=100)
