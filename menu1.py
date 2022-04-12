@@ -3,8 +3,8 @@ from tkinter import *
 #Névjegy ablak
 def nevjegy():
     abl2=Toplevel(foablak)
-    uz2=Message(abl2,text="Készítette:Dervaderics Márk",width=300)
-    gomb2=Button(abl2,Text="Kilép",command=abl2.destroy)
+    uz2=Message(abl2,text="Készítette:Dervaderics Márk")
+    gomb2=Button(abl2,text="Kilép",command=abl2.destroy)
     uz2.pack()
     gomb2.pack()
     abl2.mainloop()
@@ -20,7 +20,6 @@ def felszin():
         felszin=2*(a*b+a*c+b*c)
         mezo4.delete(0,END)
         mezo4.insert(0,str(felszin))
-
     abl3=Toplevel(foablak)
     abl3.title("A téglatest felszíne")
     abl3.minsize(width=300,height=100)
@@ -54,7 +53,7 @@ def terfogat():
         c=eval(mezo3.get())
         terfogat=a*b*c
         mezo4.delete(0,END)
-        mezo4.insert(0,str,(terfogat))
+        mezo4.insert(0,str(terfogat))
     
     abl3=Toplevel(foablak)
     abl3.title("A téglatest térfogata")
@@ -91,15 +90,16 @@ menusor.pack(side=TOP,fill=X)
 menu1=Menubutton(menusor,text="Fájl",underline=0)
 menu1.pack(side=LEFT)
 fajl=Menu(menu1)
-fajl.add_command(label="Névjegy",command=nevjegy,underline=0)
-fajl.add_command(label="Kilépés",commmand=foablak.destroy,underline=0)
+fajl.add_command(label="Névjegy",command=nevjegy, underline=0)
+fajl.add_command(label="Kilépés",command=foablak.destroy, underline=0)
 menu1.config(menu=fajl)
 
 menu2=Menubutton(menusor,text="Téglatest",underline=0)
 menu2.pack(side=LEFT)
 teglatest=Menu(menu2)
-teglatest.add_command(label="Felszín",command=felszin,underline=0)
-teglatest.add_command(label="Térfogat",command=terfogat,underline=0)
+teglatest.add_command(label="Felszín",command=felszin, underline=0)
+teglatest.add_command(label="Térfogat",command=terfogat, underline=0)
+teglatest.add_command(label="Kilépés",command=foablak.destroy, underline=0)
 menu2.config(menu=teglatest)
 
 foablak.mainloop()
